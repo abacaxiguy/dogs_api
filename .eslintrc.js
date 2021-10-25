@@ -10,6 +10,6 @@ module.exports = {
   },
   rules: {
     "no-console": "off",
-    quotes: "",
+    quotes: 0,
   },
 };
