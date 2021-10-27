@@ -1,17 +1,6 @@
 import User from "../models/User";
 
 class UserController {
-  async index(req, res) {
-    try {
-      const users = await User.findAll({
-        attributes: ["id", "username", "email"],
-      });
-      return res.json(users);
-    } catch (e) {
-      return res.status(500).json(null);
-    }
-  }
-
   async store(req, res) {
     try {
       const newUser = await User.create(req.body);
@@ -28,7 +17,7 @@ class UserController {
 
   async show(req, res) {
     try {
-      const user = await User.findByPk(req.params.id);
+      const user = await User.findByPk(req.userId);
 
       if (!user) {
         return res.status(404).json({
@@ -46,13 +35,13 @@ class UserController {
 
   async update(req, res) {
     try {
-      if (!req.params.id) {
+      if (!req.userId) {
         return res.status(400).json({
           errors: ["Missing ID."],
         });
       }
 
-      const user = await User.findByPk(req.params.id);
+      const user = await User.findByPk(req.userId);
 
       if (!user) {
         return res.status(404).json({
@@ -61,6 +50,7 @@ class UserController {
       }
 
       const updatedUser = await user.update(req.body);
+      console.log(req.body);
 
       const { id, username, email } = updatedUser;
 
@@ -74,7 +64,7 @@ class UserController {
 
   async delete(req, res) {
     try {
-      const user = await User.findByPk(req.params.id);
+      const user = await User.findByPk(req.userId);
 
       if (!user) {
         return res.status(404).json({
