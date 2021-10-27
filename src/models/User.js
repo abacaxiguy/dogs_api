@@ -9,6 +9,9 @@ export default class User extends Model {
         username: {
           type: Sequelize.STRING,
           defaultValue: "",
+          unique: {
+            msg: "Username must be unique.",
+          },
           validate: {
             len: {
               args: [3, 50],
@@ -55,5 +58,9 @@ export default class User extends Model {
     });
 
     return this;
+  }
+
+  passwordIsValid(password) {
+    return bcryptjs.compare(password, this.password_hash);
   }
 }
