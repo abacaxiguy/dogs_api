@@ -9,7 +9,9 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
-    "no-console": "off",
+    "no-console": 0,
     quotes: 0,
+    "no-param-reassign": 0,
+    "class-methods-use-this": 0,
   },
 };
