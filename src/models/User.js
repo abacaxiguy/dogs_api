@@ -5,10 +5,28 @@ export default class User extends Model {
   static init(sequelize) {
     super.init(
       {
-        username: Sequelize.STRING,
-        email: Sequelize.STRING,
+        username: {
+          type: Sequelize.STRING,
+          defaultValue: "",
+          validate: {
+            len: {
+              args: [3, 50],
+              msg: "Username must be between 3 and 50 characters.",
+            },
+          },
+        },
+        email: {
+          type: Sequelize.STRING,
+          defaultValue: "",
+          validate: {
+            len: {
+              args: [3, 50],
+              msg: "Username must be between 3 and 50 characters.",
+            },
+          },
+        },
         password_hash: Sequelize.STRING,
-        allowNull: false,
+        password: Sequelize.VIRTUAL,
       },
       {
         sequelize,
