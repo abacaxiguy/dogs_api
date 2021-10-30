@@ -7,6 +7,36 @@ import multerConfig from "../config/multerConfig";
 const upload = multer(multerConfig).single("src");
 
 class PhotoController {
+  async index(req, res) {
+    try {
+      const photos = await Photo.findAll({
+        attributes: [
+          "id",
+          "author",
+          "title",
+          "date",
+          "src",
+          "weight",
+          "age",
+          "views",
+        ],
+        order: [
+          ["id", "DESC"],
+          // [Comment, "id", "DESC"],
+        ],
+        // include: {
+        //   model: Comment,
+        //   attributes: ["comment_count"],
+        // },
+      });
+      return res.json(photos);
+    } catch (e) {
+      return res.status(400).json({
+        errors: e.errors.map((err) => err.message),
+      });
+    }
+  }
+
   store(req, res) {
     return upload(req, res, async (error) => {
       if (error) {
