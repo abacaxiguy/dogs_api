@@ -1,7 +1,9 @@
 /* eslint-disable object-curly-newline */
 import multer from "multer";
+import Sequelize from "sequelize";
 
 import Photo from "../models/Photo";
+import Comment from "../models/Comment";
 import multerConfig from "../config/multerConfig";
 
 const upload = multer(multerConfig).single("src");
@@ -10,24 +12,24 @@ class PhotoController {
   async index(req, res) {
     try {
       const photos = await Photo.findAll({
-        attributes: [
-          "id",
-          "author",
-          "title",
-          "date",
-          "src",
-          "weight",
-          "age",
-          "views",
-        ],
+        attributes: {
+          exclude: ["created_at", "updated_at"],
+          include: [
+            [
+              Sequelize.fn("COUNT", Sequelize.col("Comments.id")),
+              "comment_count",
+            ],
+          ],
+        },
         order: [
           ["id", "DESC"],
-          // [Comment, "id", "DESC"],
+          [Comment, "id", "DESC"],
         ],
-        // include: {
-        //   model: Comment,
-        //   attributes: ["comment_count"],
-        // },
+        include: {
+          model: Comment,
+          attributes: [],
+        },
+        group: ["id"],
       });
       return res.json(photos);
     } catch (e) {
@@ -58,12 +60,12 @@ class PhotoController {
         ],
         order: [
           ["id", "DESC"],
-          // [Comment, "id", "DESC"],
+          [Comment, "id", "DESC"],
         ],
-        // include: {
-        //   model: Comment,
-        //   attributes: ["comment_count"],
-        // },
+        include: {
+          model: Comment,
+          attributes: { exclude: ["created_at", "updated_at"] },
+        },
       });
 
       if (!photo) {

@@ -81,5 +81,6 @@ export default class Photo extends Model {
 
   static associate(models) {
     this.belongsTo(models.User, { foreignKey: "author" });
+    this.hasMany(models.Comment, { foreignKey: "comment_photo" });
   }
 }
