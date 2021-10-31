@@ -37,6 +37,75 @@ class PhotoController {
     }
   }
 
+  async show(req, res) {
+    try {
+      if (!req.params.id) {
+        return res.status(400).json({
+          errors: ["Missing ID"],
+        });
+      }
+
+      const photo = await Photo.findByPk(req.params.id, {
+        attributes: [
+          "id",
+          "author",
+          "title",
+          "date",
+          "src",
+          "weight",
+          "age",
+          "views",
+        ],
+        order: [
+          ["id", "DESC"],
+          // [Comment, "id", "DESC"],
+        ],
+        // include: {
+        //   model: Comment,
+        //   attributes: ["comment_count"],
+        // },
+      });
+
+      if (!photo) {
+        return res.status(404).json({
+          errors: ["Photo does not exist."],
+        });
+      }
+
+      return res.json(photo);
+    } catch (e) {
+      return res.status(400).json({
+        errors: e.errors.map((err) => err.message),
+      });
+    }
+  }
+
+  async delete(req, res) {
+    try {
+      if (!req.params.id) {
+        return res.status(400).json({
+          errors: ["Missing ID"],
+        });
+      }
+
+      const photo = await Photo.findByPk(req.params.id);
+
+      if (!photo) {
+        return res.status(404).json({
+          errors: ["Photo does not exist."],
+        });
+      }
+
+      await photo.destroy();
+
+      return res.json({ message: "User deleted successfully" });
+    } catch (e) {
+      return res.status(400).json({
+        errors: e.errors.map((err) => err.message),
+      });
+    }
+  }
+
   store(req, res) {
     return upload(req, res, async (error) => {
       if (error) {
