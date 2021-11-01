@@ -93,15 +93,15 @@ class PhotoController {
 
       const photo = await Photo.findByPk(req.params.id);
 
-      if (photo.author !== req.userUsername) {
-        return res.status(400).json({
-          errors: ["Login required."],
-        });
-      }
-
       if (!photo) {
         return res.status(404).json({
           errors: ["Photo does not exist."],
+        });
+      }
+
+      if (photo.author !== req.userUsername) {
+        return res.status(400).json({
+          errors: ["Login required."],
         });
       }
 
