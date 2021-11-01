@@ -54,6 +54,7 @@ class PhotoController {
           "title",
           "date",
           "src",
+          "url",
           "weight",
           "age",
           "views",
@@ -141,8 +142,8 @@ class PhotoController {
           age,
         });
 
-        const { id, author, date, views } = photo;
-        return res.json({ id, author, title, weight, age, src, date, views });
+        const { id, author, date, views, url } = photo;
+        return res.json({ id, author, title, weight, age, url, date, views });
       } catch (e) {
         return res.status(400).json({
           errors: e.errors.map((err) => err.message),
