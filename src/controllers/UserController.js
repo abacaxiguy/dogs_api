@@ -1,4 +1,5 @@
 import User from "../models/User";
+import Photo from "../models/Photo";
 
 class UserController {
   async store(req, res) {
@@ -17,7 +18,14 @@ class UserController {
 
   async show(req, res) {
     try {
-      const user = await User.findByPk(req.userId);
+      const user = await User.findByPk(req.userId, {
+        attributes: ["id", "username", "email"],
+        order: [[Photo, "id", "DESC"]],
+        include: {
+          model: Photo,
+          attributes: { exclude: ["created_at", "updated_at"] },
+        },
+      });
 
       if (!user) {
         return res.status(404).json({
@@ -25,9 +33,7 @@ class UserController {
         });
       }
 
-      const { id, username, email } = user;
-
-      return res.json({ id, username, email });
+      return res.json(user);
     } catch (e) {
       return res.status(500).json(null);
     }

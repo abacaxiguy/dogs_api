@@ -107,7 +107,7 @@ class PhotoController {
 
       await photo.destroy();
 
-      return res.json({ message: "User deleted successfully" });
+      return res.json({ message: "Photo deleted successfully" });
     } catch (e) {
       return res.status(400).json({
         errors: e.errors.map((err) => err.message),

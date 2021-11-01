@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable object-curly-newline */
 import Comment from "../models/Comment";
+import Photo from "../models/Photo";
 
 class CommentController {
   async show(req, res) {
@@ -45,6 +46,14 @@ class CommentController {
       if (!comment_photo) {
         return res.status(400).json({
           errors: ["Missing ID."],
+        });
+      }
+
+      const photo = await Photo.findByPk(req.params.id);
+
+      if (!photo) {
+        return res.status(400).json({
+          errors: ["Invalid ID"],
         });
       }
 
