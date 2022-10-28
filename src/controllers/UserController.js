@@ -20,11 +20,7 @@ class UserController {
     try {
       const user = await User.findByPk(req.userId, {
         attributes: ["id", "username", "email"],
-        order: [[Photo, "id", "DESC"]],
-        include: {
-          model: Photo,
-          attributes: { exclude: ["created_at", "updated_at"] },
-        },
+        order: [["id", "DESC"]],
       });
 
       if (!user) {
