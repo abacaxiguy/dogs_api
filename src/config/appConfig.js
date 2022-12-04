@@ -1,3 +1,3 @@
 export default {
-  url: "http://localhost:3333",
+  url: process.env.DATABASE_HOST + process.env.APP_PORT,
 };
