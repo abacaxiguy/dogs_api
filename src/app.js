@@ -16,7 +16,7 @@ import tokenRoutes from "./routes/tokenRoutes";
 import photoRoutes from "./routes/photoRoutes";
 import commentRoutes from "./routes/commentRoutes";
 
-const whiteList = process.env.WHITELIST;
+const whiteList = ["http://localhost:3000", "https://abacaxiguydogs-api.herokuapp.com"];
 
 const corsOptions = {
   origin(origin, callback) {
