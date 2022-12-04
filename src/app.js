@@ -4,17 +4,17 @@ import { resolve } from "path";
 
 dotenv.config();
 
-import "./src/database";
+import "./database";
 
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 
-import homeRoutes from "./src/routes/homeRoutes";
-import userRoutes from "./src/routes/userRoutes";
-import tokenRoutes from "./src/routes/tokenRoutes";
-import photoRoutes from "./src/routes/photoRoutes";
-import commentRoutes from "./src/routes/commentRoutes";
+import homeRoutes from "./routes/homeRoutes";
+import userRoutes from "./routes/userRoutes";
+import tokenRoutes from "./routes/tokenRoutes";
+import photoRoutes from "./routes/photoRoutes";
+import commentRoutes from "./routes/commentRoutes";
 
 const whiteList = ["http://localhost:3000"];
 
