@@ -16,7 +16,7 @@ import tokenRoutes from "./routes/tokenRoutes";
 import photoRoutes from "./routes/photoRoutes";
 import commentRoutes from "./routes/commentRoutes";
 
-const whiteList = ["http://localhost:3000"];
+const whiteList = process.env.WHITELIST;
 
 const corsOptions = {
   origin(origin, callback) {
