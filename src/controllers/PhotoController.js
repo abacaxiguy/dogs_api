@@ -16,7 +16,7 @@ class PhotoController {
           exclude: ["created_at", "updated_at"],
           include: [
             [
-              Sequelize.fn("COUNT", Sequelize.col("comments.id")),
+              Sequelize.fn("COUNT", Sequelize.col("Comments.id")),
               "comment_count",
             ],
           ],
