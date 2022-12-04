@@ -16,8 +16,10 @@ module.exports = {
   },
   dialectOptions: {
     timezone: "local",
-    ssl: true,
-    native: true,
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
   },
   timezone: "America/Maceio",
 };
