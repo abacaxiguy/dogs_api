@@ -1,5 +1,4 @@
 import User from "../models/User";
-import Photo from "../models/Photo";
 
 class UserController {
   async store(req, res) {
