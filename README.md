@@ -37,7 +37,8 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
 -   🏠 home: [/](https://abacaxiguydogs-api.herokuapp.com/)
 -   👥 users: [/users](https://abacaxiguydogs-api.herokuapp.com/users)
 
-    - `[POST]` Store - [/users](https://abacaxiguydogs-api.herokuapp.com/users)
+    - `[POST]` **Store** - [/users](https://abacaxiguydogs-api.herokuapp.com/users)
+    
       ```json
       {
         "username": "username",
@@ -45,8 +46,11 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
         "password": "password"
       }
       ```
-    - `[GET]` Show - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
-    - `[PUT]` Update - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
+
+    - `[GET]` **Show** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
+
+    - `[PUT]` **Update** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
+
       ```json
       {
         "username": "username",
@@ -54,13 +58,17 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
         "password": "password"
       }
       ```
-    - `[DELETE]` Delete - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
+
+    - `[DELETE]` **Delete** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
 
 -   🖼 photos: [/photos](https://abacaxiguydogs-api.herokuapp.com/photos)
 
-    - `[GET]` Index - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos)
-    - `[GET]` Show - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id)
-    - `[POST]` Store - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos) **(login required)**
+    - `[GET]` **Index** - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos)
+
+    - `[GET]` **Show** - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id)
+
+    - `[POST]` **Store** - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos) **(login required)**
+
       ```json
       {
         "title": "Ex: Dog's name",
@@ -69,12 +77,15 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
         "age": 2 # in years
       }
       ```
-    - `[DELETE]` Delete - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id) **(login required)**
+
+    - `[DELETE]` **Delete** - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id) **(login required)**
 
 -   📝 comments: [/comments](https://abacaxiguydogs-api.herokuapp.com/comments)
 
-    - `[GET]` Show - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id)
-    - `[POST]` Store - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id) **(login required)**
+    - `[GET]` **Show** - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id)
+
+    - `[POST]` **Store** - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id) **(login required)**
+
       ```json
       {
         "comment_content": "Ex: This is a comment"
@@ -83,7 +94,8 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
 
 -   🔐 tokens: [/tokens](https://abacaxiguydogs-api.herokuapp.com/tokens)
 
-    - `[POST]` Store - [/tokens](https://abacaxiguydogs-api.herokuapp.com/tokens)
+    - `[POST]` **Store** - [/tokens](https://abacaxiguydogs-api.herokuapp.com/tokens)
+
       ```json
       {
         "username": "username",
