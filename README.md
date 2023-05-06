@@ -16,11 +16,9 @@
 
 ## 📖 About
 
-This is an API made with Express for [🐶 Dogs 🐶](https://github.com/abacaxiguy/dogs), the Instagram for dogs.
+This is an API made with Express for [🐶 Dogs 🐶](https://github.com/abacaxiguy/dogs), the Instagram for dogs. I suggest, if you didn't already, check out that first, then comeback here so you can see how the API works.
 
-This API was made in replacement of the original API from the [Origamid's course](https://www.origamid.com/curso/react-completo/), which was made with WordPress.
-
-This API is made with **Node.js**, **Express**, **Sequelize** and **MySQL**.
+This API was made in replacement of the original API from the [Origamid's course](https://www.origamid.com/curso/react-completo/), which was made with WordPress. This one is made with Node.js, Express and more.
 
 ---
 
@@ -38,7 +36,7 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
 -   👥 users: [/users](https://abacaxiguydogs-api.herokuapp.com/users)
 
     - `[POST]` **Store** - [/users](https://abacaxiguydogs-api.herokuapp.com/users)
-    
+
       ```json
       {
         "username": "username",
@@ -72,9 +70,9 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
       ```json
       {
         "title": "Ex: Dog's name",
-        "src": file,
-        "weight": 7 # in kg,
-        "age": 2 # in years
+        "src": <file>,
+        "weight": 7,
+        "age": 2
       }
       ```
 
@@ -111,11 +109,12 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
 
 ## 🧪 Technologies
 
--   [Node.js](https://nodejs.org/en/) 🟢
--   [Express](https://expressjs.com/) 🟢
--   [Sequelize](https://sequelize.org/) 🟢
--   [MySQL](https://www.mysql.com/) 🟢
--   [Helmet](https://helmetjs.github.io/) 🟢
+This project was developed using the following technologies:
+
+<a href="https://expressjs.com/" target="_blank"><img alt="Express" height="31px" src="https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white" /></a>
+<a href="https://nodejs.org/en/" target="_blank"><img alt="Node.js" height="30px" src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white" /></a>
+<a href="https://sequelize.org/" target="_blank"><img alt="Sequelize" height="30px" src="https://img.shields.io/badge/-Sequelize-52B0E7?style=flat-square&logo=sequelize&logoColor=white" /></a>
+<a href="https://www.mysql.com/" target="_blank"><img alt="MySQL" height="30px" src="https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" /></a>
 
 ---
 
@@ -125,7 +124,7 @@ To run this API locally, you'll need [Node.js](https://nodejs.org/en/) installed
 
 ```bash
 # Clone this repository
-$ git clone
+$ git clone https://github.com/abacaxiguy/dogs_api.git
 
 # Go into the repository
 $ cd dogs_api
@@ -139,19 +138,21 @@ $ npm start # yarn or pnpm
 
 🎉 Congratulations, the API is running in `http://localhost:{APP_PORT}` (default: `http://localhost:3000`)!
 
-**(⚠ Remember to fill the `APP_PORT` and the others fields in the `.env` file, following the `.env.example` file ⚠)**
+**⚠ Remember to fill the `APP_PORT` and the others fields in the `.env` file, following the [`.env.example`](https://github.com/abacaxiguy/dogs_api/blob/master/.env-example) file ⚠**
 
 ---
 
 ## 📋 API Documentation
 
--   [Insomnia](insomnia.json) 🧿️
+You can check the API documentation in Insomnia here:
+
+<a href="https://github.com/abacaxiguy/dogs_api/blob/master/insomnia.json" target="_blank"><img alt="Insomnia" height="30px" src="https://img.shields.io/badge/-Insomnia-5849BE?style=flat-square&logo=insomnia&logoColor=white" /></a>
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/abacaxiguy/dogs_api/issues).
+Contributions, issues and feature requests are welcome!<br> Feel free to check [issues page](https://github.com/abacaxiguy/dogs_api/issues).
 
 ---
 
