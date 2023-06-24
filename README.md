@@ -32,74 +32,74 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
 
 <br>
 
--   🏠 home: [/](https://abacaxiguydogs-api.herokuapp.com/)
--   👥 users: [/users](https://abacaxiguydogs-api.herokuapp.com/users)
+- 🏠 home: [/](https://abacaxiguydogs-api.herokuapp.com/)
+- 👥 users: [/users](https://abacaxiguydogs-api.herokuapp.com/users)
 
-    - `[POST]` **Store** - [/users](https://abacaxiguydogs-api.herokuapp.com/users)
+  - `[POST]` **Store** - [/users](https://abacaxiguydogs-api.herokuapp.com/users)
 
-      ```json
-      {
-        "username": "username",
-        "email": "email@example.com",
-        "password": "password"
-      }
-      ```
+    ```json
+    {
+      "username": "username",
+      "email": "email@example.com",
+      "password": "password"
+    }
+    ```
 
-    - `[GET]` **Show** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
+  - `[GET]` **Show** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
 
-    - `[PUT]` **Update** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
+  - `[PUT]` **Update** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
 
-      ```json
-      {
-        "username": "username",
-        "email": "email@example.com",
-        "password": "password"
-      }
-      ```
+    ```json
+    {
+      "username": "username",
+      "email": "email@example.com",
+      "password": "password"
+    }
+    ```
 
-    - `[DELETE]` **Delete** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
+  - `[DELETE]` **Delete** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
 
--   🖼 photos: [/photos](https://abacaxiguydogs-api.herokuapp.com/photos)
+- 🖼 photos: [/photos](https://abacaxiguydogs-api.herokuapp.com/photos)
 
-    - `[GET]` **Index** - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos)
+  - `[GET]` **Index** - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos)
 
-    - `[GET]` **Show** - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id)
+  - `[GET]` **Show** - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id)
 
-    - `[POST]` **Store** - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos) **(login required)**
+  - `[POST]` **Store** - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos) **(login required)**
 
-      ```json
-      {
-        "title": "Ex: Dog's name",
-        "src": <file>,
-        "weight": 7,
-        "age": 2
-      }
-      ```
+    ```json
+    {
+      "title": "Ex: Dog's name",
+      "src": <file>,
+      "weight": 7,
+      "age": 2
+    }
+    ```
 
-    - `[DELETE]` **Delete** - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id) **(login required)**
+  - `[DELETE]` **Delete** - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id) **(login required)**
 
--   📝 comments: [/comments](https://abacaxiguydogs-api.herokuapp.com/comments)
+- 📝 comments: [/comments](https://abacaxiguydogs-api.herokuapp.com/comments)
 
-    - `[GET]` **Show** - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id)
+  - `[GET]` **Show** - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id)
 
-    - `[POST]` **Store** - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id) **(login required)**
+  - `[POST]` **Store** - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id) **(login required)**
 
-      ```json
-      {
-        "comment_content": "Ex: This is a comment"
-      }
-      ```
+    ```json
+    {
+      "comment_content": "Ex: This is a comment"
+    }
+    ```
 
--   🔐 tokens: [/tokens](https://abacaxiguydogs-api.herokuapp.com/tokens)
+- 🔐 tokens: [/tokens](https://abacaxiguydogs-api.herokuapp.com/tokens)
 
-    - `[POST]` **Store** - [/tokens](https://abacaxiguydogs-api.herokuapp.com/tokens)
+  - `[POST]` **Store** - [/tokens](https://abacaxiguydogs-api.herokuapp.com/tokens)
 
-      ```json
-      {
-        "username": "username",
-        "password": "password"
-      }
-      ```
+    ```json
+    {
+      "username": "username",
+      "password": "password"
+    }
+    ```
 
 <br>
 
@@ -111,10 +111,10 @@ Deploy made in [Heroku 🟪](https://www.heroku.com/)!
 
 This project was developed using the following technologies:
 
-<a href="https://expressjs.com/" target="_blank"><img alt="Express" height="31px" src="https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white" /></a>
-<a href="https://nodejs.org/en/" target="_blank"><img alt="Node.js" height="30px" src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white" /></a>
-<a href="https://sequelize.org/" target="_blank"><img alt="Sequelize" height="30px" src="https://img.shields.io/badge/-Sequelize-52B0E7?style=flat-square&logo=sequelize&logoColor=white" /></a>
-<a href="https://www.mysql.com/" target="_blank"><img alt="MySQL" height="30px" src="https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" /></a>
+<a href="https://expressjs.com/" target="_blank"><img alt="Express" height="31px" src="https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express&logoColor=white" /></a>
+<a href="https://nodejs.org/en/" target="_blank"><img alt="Node.js" height="30px" src="https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" /></a>
+<a href="https://sequelize.org/" target="_blank"><img alt="Sequelize" height="30px" src="https://img.shields.io/badge/-Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white" /></a>
+<a href="https://www.mysql.com/" target="_blank"><img alt="MySQL" height="30px" src="https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" /></a>
 
 ---
 
@@ -146,7 +146,7 @@ $ npm start # yarn or pnpm
 
 You can check the API documentation in Insomnia here:
 
-<a href="https://github.com/abacaxiguy/dogs_api/blob/master/insomnia.json" target="_blank"><img alt="Insomnia" height="30px" src="https://img.shields.io/badge/-Insomnia-5849BE?style=flat-square&logo=insomnia&logoColor=white" /></a>
+<a href="https://github.com/abacaxiguy/dogs_api/blob/master/insomnia.json" target="_blank"><img alt="Insomnia" height="30px" src="https://img.shields.io/badge/-Insomnia-5849BE?style=for-the-badge&logo=insomnia&logoColor=white" /></a>
 
 ---
 
