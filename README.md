@@ -32,22 +32,10 @@ Deploy made in [Render 🟪](https://www.render.com/)!
 
 <br>
 
-- 🏠 home: [/](https://abacaxiguydogs-api.herokuapp.com/)
-- 👥 users: [/users](https://abacaxiguydogs-api.herokuapp.com/users)
+- 🏠 home: [/](https://dogs-api-nzcw.onrender.com/)
+- 👥 users: [/users](https://dogs-api-nzcw.onrender.com/users)
 
-  - `[POST]` **Store** - [/users](https://abacaxiguydogs-api.herokuapp.com/users)
-
-    ```json
-    {
-      "username": "username",
-      "email": "email@example.com",
-      "password": "password"
-    }
-    ```
-
-  - `[GET]` **Show** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
-
-  - `[PUT]` **Update** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
+  - `[POST]` **Store** - [/users](https://dogs-api-nzcw.onrender.com/users)
 
     ```json
     {
@@ -57,15 +45,27 @@ Deploy made in [Render 🟪](https://www.render.com/)!
     }
     ```
 
-  - `[DELETE]` **Delete** - [/users](https://abacaxiguydogs-api.herokuapp.com/users) **(login required)**
+  - `[GET]` **Show** - [/users](https://dogs-api-nzcw.onrender.com/users) **(login required)**
 
-- 🖼 photos: [/photos](https://abacaxiguydogs-api.herokuapp.com/photos)
+  - `[PUT]` **Update** - [/users](https://dogs-api-nzcw.onrender.com/users) **(login required)**
 
-  - `[GET]` **Index** - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos)
+    ```json
+    {
+      "username": "username",
+      "email": "email@example.com",
+      "password": "password"
+    }
+    ```
 
-  - `[GET]` **Show** - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id)
+  - `[DELETE]` **Delete** - [/users](https://dogs-api-nzcw.onrender.com/users) **(login required)**
 
-  - `[POST]` **Store** - [/photos](https://abacaxiguydogs-api.herokuapp.com/photos) **(login required)**
+- 🖼 photos: [/photos](https://dogs-api-nzcw.onrender.com/photos)
+
+  - `[GET]` **Index** - [/photos](https://dogs-api-nzcw.onrender.com/photos)
+
+  - `[GET]` **Show** - [/photos/:id](https://dogs-api-nzcw.onrender.com/photos/:id)
+
+  - `[POST]` **Store** - [/photos](https://dogs-api-nzcw.onrender.com/photos) **(login required)**
 
     ```json
     {
@@ -76,13 +76,13 @@ Deploy made in [Render 🟪](https://www.render.com/)!
     }
     ```
 
-  - `[DELETE]` **Delete** - [/photos/:id](https://abacaxiguydogs-api.herokuapp.com/photos/:id) **(login required)**
+  - `[DELETE]` **Delete** - [/photos/:id](https://dogs-api-nzcw.onrender.com/photos/:id) **(login required)**
 
-- 📝 comments: [/comments](https://abacaxiguydogs-api.herokuapp.com/comments)
+- 📝 comments: [/comments](https://dogs-api-nzcw.onrender.com/comments)
 
-  - `[GET]` **Show** - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id)
+  - `[GET]` **Show** - [/comments/:id](https://dogs-api-nzcw.onrender.com/comments/:id)
 
-  - `[POST]` **Store** - [/comments/:id](https://abacaxiguydogs-api.herokuapp.com/comments/:id) **(login required)**
+  - `[POST]` **Store** - [/comments/:id](https://dogs-api-nzcw.onrender.com/comments/:id) **(login required)**
 
     ```json
     {
@@ -90,9 +90,9 @@ Deploy made in [Render 🟪](https://www.render.com/)!
     }
     ```
 
-- 🔐 tokens: [/tokens](https://abacaxiguydogs-api.herokuapp.com/tokens)
+- 🔐 tokens: [/tokens](https://dogs-api-nzcw.onrender.com/tokens)
 
-  - `[POST]` **Store** - [/tokens](https://abacaxiguydogs-api.herokuapp.com/tokens)
+  - `[POST]` **Store** - [/tokens](https://dogs-api-nzcw.onrender.com/tokens)
 
     ```json
     {
