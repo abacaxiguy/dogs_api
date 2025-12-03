@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 import Sequelize from "sequelize";
 import databaseConfig from "../config/database";
 import User from "../models/User";
@@ -7,7 +6,7 @@ import Comment from "../models/Comment";
 
 const models = [User, Photo, Comment];
 
-const connection = new Sequelize(databaseConfig);
+const connection = new Sequelize(process.env.DATABASE_URL, databaseConfig);
 
 models.forEach((model) => model.init(connection));
 models.forEach(

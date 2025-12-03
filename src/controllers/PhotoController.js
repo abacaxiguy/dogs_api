@@ -125,7 +125,7 @@ class PhotoController {
       try {
         const { title, weight, age } = req.body;
         const username = req.userUsername;
-        const src = req.file.filename;
+        const src = req.file.path;
 
         if (!username) {
           return res.status(400).json({

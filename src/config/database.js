@@ -1,12 +1,14 @@
 require("dotenv").config();
 
 module.exports = {
-  dialect: process.env.DATABASE_DIALECT,
-  host: process.env.DATABASE_HOST,
-  port: process.env.DATABASE_PORT,
-  username: process.env.DATABASE_USERNAME,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE,
+  dialect: "postgres",
+  url: process.env.DATABASE_URL,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
   define: {
     timestamps: true,
     underscored: true,
@@ -14,8 +16,4 @@ module.exports = {
     createdAt: "created_at",
     updatedAt: "updated_at",
   },
-  dialectOptions: {
-    timezone: "local",
-  },
-  timezone: "America/Maceio",
 };

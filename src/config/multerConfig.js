@@ -1,22 +1,30 @@
 import multer from "multer";
-import { extname, resolve } from "path";
+import { v2 as cloudinary } from "cloudinary";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
 
-const random = () => Math.floor(Math.random() * 10000 + 10000);
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: {
+    folder: "dogs_api",
+    allowed_formats: ["jpg", "jpeg", "png"],
+    transformation: [{ width: 1000, height: 1000, crop: "limit" }],
+  },
+});
 
 export default {
   fileFilter: (req, file, cb) => {
     if (file.mimetype !== "image/png" && file.mimetype !== "image/jpeg") {
       return cb(new multer.MulterError("File needs to be PNG or JPG"));
     }
-
     return cb(null, true);
   },
-  storage: multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, resolve(__dirname, "..", "..", "uploads", "images"));
-    },
-    filename: (req, file, cb) => {
-      cb(null, `${Date.now()}${random()}${extname(file.originalname)}`);
-    },
-  }),
+  storage,
 };
+
+export { cloudinary };

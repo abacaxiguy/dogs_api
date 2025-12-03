@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: ["airbnb-base"],
   parserOptions: {
@@ -13,5 +14,8 @@ module.exports = {
     quotes: 0,
     "no-param-reassign": 0,
     "class-methods-use-this": 0,
+    "linebreak-style": 0,
+    "import/no-extraneous-dependencies": 0,
+    "comma-dangle": 0,
   },
 };
