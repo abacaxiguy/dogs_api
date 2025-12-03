@@ -24,8 +24,8 @@ This API was made in replacement of the original API from the [Origamid's course
 
 ## 🌎 Online!
 
-This API [is online](https://abacaxiguydogs-api.herokuapp.com/) at this moment!<br>
-Deploy made in [Heroku 🟪](https://www.heroku.com/)!
+This API [is online](https://dogs-api-nzcw.onrender.com/) at this moment!<br>
+Deploy made in [Render 🟪](https://www.render.com/)!
 
 <details>
   <summary><b>🗺 Check out the API routes here:</b></summary>
