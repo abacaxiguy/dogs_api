@@ -16,10 +16,7 @@ import tokenRoutes from "./routes/tokenRoutes";
 import photoRoutes from "./routes/photoRoutes";
 import commentRoutes from "./routes/commentRoutes";
 
-const whiteList = [
-  "http://localhost:3000",
-  "https://dogs-abacaxiguy.vercel.app",
-];
+const whiteList = ["http://localhost:3000", process.env.APP_URL];
 
 const corsOptions = {
   origin(origin, callback) {
