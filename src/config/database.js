@@ -8,6 +8,7 @@ module.exports = {
       require: true,
       rejectUnauthorized: false,
     },
+    family: 4,
   },
   define: {
     timestamps: true,
