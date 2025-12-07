@@ -21,15 +21,21 @@ class PhotoController {
             ],
           ],
         },
-        order: [
-          ["id", "DESC"],
-          [Comment, "id", "DESC"],
-        ],
+        order: [["id", "DESC"]],
         include: {
           model: Comment,
           attributes: [],
         },
-        group: ["id"],
+        group: [
+          "Photo.id",
+          "Photo.author",
+          "Photo.title",
+          "Photo.date",
+          "Photo.src",
+          "Photo.weight",
+          "Photo.age",
+          "Photo.views",
+        ],
       });
       return res.json(photos);
     } catch (e) {
